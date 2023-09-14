@@ -12,10 +12,7 @@
 package cl.bci.ms.user.services;
 
 import cl.bci.ms.user.config.JwtService;
-import cl.bci.ms.user.dtos.UserRequestDto;
 import cl.bci.ms.user.dtos.UserResponseDto;
-import cl.bci.ms.user.entities.Phone;
-import cl.bci.ms.user.entities.User;
 import cl.bci.ms.user.exceptions.UserException;
 import cl.bci.ms.user.fixture.UserRequestDtoFixture;
 import cl.bci.ms.user.fixture.UserResponseDtoFixture;
@@ -29,10 +26,7 @@ import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.MockitoAnnotations;
 
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
-import java.util.UUID;
+
 
 /**
  * TestUserSingUpServiceImpl.
@@ -66,27 +60,10 @@ public class TestUserSignUpServiceImpl {
         Mockito.when(repositoryService.saveOrUpdateUser(Mockito.any()))
                 .thenReturn(UserResponseDtoFixture.getResponseDto());
         UserResponseDto response = userSignUpService.userSignUpProcess(UserRequestDtoFixture.getRequestDto());
-        System.out.println("response :"+response);
+
         Assertions.assertNotEquals(response.getToken(),AUTH);
 
 
     }
-    private User dummyUserEntity() {
-        User user=new User();
-        user.setUserId(UUID.randomUUID());
-        user.setLastLogin(new Date());
-        user.setCreated(new Date());
-        user.setToken(AUTH);
-        user.setEmail("some@email.com");
-        user.setActive(true);
-        Phone phone=new Phone();
-        phone.setPhoneId(1L);
-        phone.setNumber("987654321");
-        phone.setCityCode("02");
-        phone.setCountryCode("52");
-        List<Phone> phones=new ArrayList<>();
-        phones.add(phone);
-        user.setPhones(phones);
-        return user;
-    }
+
 }

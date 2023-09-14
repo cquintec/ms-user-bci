@@ -13,7 +13,6 @@ package cl.bci.ms.user.fixture;
 
 import cl.bci.ms.user.MockLoaderBase;
 import cl.bci.ms.user.dtos.UserRequestDto;
-import cl.bci.ms.user.dtos.UserResponseDto;
 import com.google.gson.Gson;
 
 /**

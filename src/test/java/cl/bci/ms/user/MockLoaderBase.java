@@ -11,8 +11,9 @@
  */
 package cl.bci.ms.user;
 
-import java.nio.charset.StandardCharsets;
 import org.apache.commons.io.IOUtils;
+
+import java.nio.charset.StandardCharsets;
 
 /**
  * MockLoaderBase.

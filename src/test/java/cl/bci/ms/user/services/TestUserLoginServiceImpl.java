@@ -12,7 +12,6 @@
 package cl.bci.ms.user.services;
 
 import cl.bci.ms.user.config.JwtService;
-import cl.bci.ms.user.dtos.PhoneDto;
 import cl.bci.ms.user.dtos.UserResponseDto;
 import cl.bci.ms.user.entities.Phone;
 import cl.bci.ms.user.entities.User;

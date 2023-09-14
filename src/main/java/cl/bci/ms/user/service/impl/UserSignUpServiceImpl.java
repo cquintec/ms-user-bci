@@ -43,7 +43,7 @@ public class UserSignUpServiceImpl implements UserSignUpService {
         }
 
         User user = userMapper(userRq);
-        System.out.println("sssss"+user);
+
         return repositoryService.saveOrUpdateUser(user);
     }
 
