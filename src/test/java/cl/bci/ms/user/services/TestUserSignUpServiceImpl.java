@@ -62,7 +62,15 @@ public class TestUserSignUpServiceImpl {
         UserResponseDto response = userSignUpService.userSignUpProcess(UserRequestDtoFixture.getRequestDto());
 
         Assertions.assertNotEquals(response.getToken(),AUTH);
+    }
 
+    @Test
+    void testUserSignUpProcess_usuario_existe() throws UserException {
+        Mockito.when(repositoryService.userExist(Mockito.anyString(),Mockito.anyString()))
+                .thenReturn(Boolean.TRUE);
+
+        Assertions.assertThrows(UserException.class, () -> userSignUpService
+                .userSignUpProcess(UserRequestDtoFixture.getRequestDto()));
 
     }
 
