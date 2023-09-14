@@ -1,0 +1,17 @@
+{
+  "userId": "8539405f-4598-4e5c-a042-d56d43808bdd",
+  "created": "2023-09-14T01:56:05.252+00:00",
+  "lastLogin": "2023-09-14T01:56:05.252+00:00",
+  "token": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDbGF1ZGlvIiwiZXhwIjoxNjk0NjkyNTY1LCJpYXQiOjE2OTQ2NTY1NjV9.iPuOD7UUVFkLTB4WNtVaxGUPAIJBU6HUJ589p4T2adQ",
+  "name": "Claudio",
+  "email": "claudio@algo.com",
+  "password": "a2asfGfdfdf4",
+  "phones": [
+    {
+      "number": "23456789",
+      "cityCode": "9",
+      "countryCode": "CL"
+    }
+  ],
+  "active": true
+}

@@ -1,0 +1,12 @@
+{
+  "name": "Claudio",
+  "email": "claudio@algo.com",
+  "password": "a2asfGfdfdf4",
+  "phones": [
+    {
+      "number": 23456789,
+      "cityCode": 9,
+      "countryCode": "CL"
+    }
+  ]
+}
