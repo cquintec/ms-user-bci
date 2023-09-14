@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "03add301-a3dc-4c15-85aa-170a5ef161a9",
+		"name": "ms-user-bci",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21635598"
+	},
+	"item": [
+		{
+			"name": "Auth login",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDbGF1ZGlvIiwiZXhwIjoxNjk0Njc2ODIwLCJpYXQiOjE2OTQ2NDA4MjB9.AWatvwQCjWUWdN9xuZYUABiB5i8zlpWoyaJGNagk00s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDbGF1ZGlvIiwiZXhwIjoxNjk0NjA0OTg1LCJpYXQiOjE2OTQ1Njg5ODV9.vRXVEMQRFEEqlPHR34ZO258I4ybxLNs3EXdb4shp75Q",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJDbGF1ZGlvIiwiZXhwIjoxNjk0Njc1MDA5LCJpYXQiOjE2OTQ2MzkwMDl9.Jmb4OvZdbgRValaDUTw3Hs8iXFe39n9o2dLsTAdmsRM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignUp",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Claudio\",\n  \"email\": \"claudio@algo.com\",\n  \"password\": \"a2asfGfdfdf4\",\n  \"phones\": [\n    {\n      \"number\": 23456789,\n      \"cityCode\": 9,\n      \"countryCode\": \"CL\"\n    }\n  ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/users/sign-up",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"users",
+						"sign-up"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
